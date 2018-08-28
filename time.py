@@ -2,23 +2,25 @@ import time
 import random
 
 print("responde lo mas rapido posible")
-jugar=True
-while jugar=True:
+
+while True:
 	inicio=time.time()
-	numazar.random.randint(1,5)
-	repuesta=int(input("cuanto es 2x "+str(numazar)+"?"))
+	numazar=random.randint(1,5)
+	respuesta=int(input("cuanto es 2x "+str(numazar)+"?"))
+	multi=2*numazar
 	final=time.time()
-	tiempo=round(fina-inincio,0)
-	if respuesta==numazar:
-		print("Felicidades resultado correcto", end="")
-		if time<4:
-			print ("el tiempo fue menor de 4: "+ tiempo)
+	tiempo=round(final-inicio,0)
+	if respuesta==multi:
+		print("Felicidades resultado correcto")
+		if tiempo<5:
+			print ("el tiempo fue menor de 5: "+ str(tiempo))
 			break
-		if time=>4:
-			print ("el tiempo fue mayor de 4: "+ tiempo)
+		elif tiempo>=5:
+			print ("el tiempo fue mayor de 5: "+ str(tiempo))
 			break
 	else:
 		print("suerte la proxima")
+		break
 
 
 
